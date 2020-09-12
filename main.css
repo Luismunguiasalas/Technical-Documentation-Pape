@@ -4,6 +4,10 @@
     margin: 0;
 }
 
+body {
+    width: 100%;
+}
+
 header {
     text-align: center;
     font-size: 1em;
@@ -40,6 +44,11 @@ code {
     display: block;
     text-align: center;
     border: 1px solid black;
+    color: black;
+}
+
+.nav-link:hover {
+    background-color: lightgrey;
 }
 
 /* navigation end */
@@ -48,4 +57,56 @@ code {
 #main-doc {
     width: 95%;
     margin: auto;
+}
+
+@media screen and (min-width: 500px) {
+    #navbar {
+        /* width: 70%; */
+        margin: auto;
+    }
+
+    .nav-link {
+        margin: auto;
+        width: 30%;
+        border: none;
+        text-decoration-line: underline;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        display: flex;
+    }
+
+    header {
+        font-size: 1.8em;
+    }
+
+    #navbar {
+        position: fixed;
+        min-width: 290px;
+        max-width: 19vw;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-right-style: solid;
+        border-block-color: black;
+    }
+
+    .nav-link {
+        width: 100%;
+        border: 1px solid black;
+        text-decoration: none;
+        padding: 2.3em;
+    }
+
+    #main-doc {
+        position: absolute;
+        margin-left: 300px;
+        margin-right: 10px;
+        width: 76vw;
+        overflow-y: scroll;
+
+        /* position: fixed; */
+    }
 }
